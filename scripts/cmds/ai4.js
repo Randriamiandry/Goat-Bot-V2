@@ -28,7 +28,7 @@ module.exports = {
       const prompt = event.body.substring(prefix.length).trim();
 
       if (!prompt) {
-        const defaultMessage = getCenteredHeader("🔎ATH| 🇲🇬🤖") + "\n━━━━━━━━━━━━━━━━━━\nHello! Ask me anything!";
+        const defaultMessage = getCenteredHeader("🔎ATH| 🇲🇬🤖") + "\n━━━━━━━━━━━━━━━━━━\nSalut Athanasius🤗! Demandez-moi n'importe quoi!";
         await message.reply(defaultMessage);
         return;
       }
