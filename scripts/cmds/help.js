@@ -34,7 +34,7 @@ module.exports = {
       const categories = {};
       let msg = "";
 
-      msg += `╔═══════════╗\n  🔧ATHANASIUS📝 \n╚═══════════╝`; // replace with your name 
+      msg += `╔═══════════╗\n 🔧ATHANASIUS📝  \n╚═══════════╝`; // replace with your name 
 
       for (const [name, value] of commands) {
         if (value.config.role > 1 && role < value.config.role) continue;
@@ -51,7 +51,7 @@ module.exports = {
           const names = categories[category].commands.sort();
           for (let i = 0; i < names.length; i += 3) {
             const cmds = names.slice(i, i + 3).map((item) => `🏷️${item}`);
-            msg += `\n│ ${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
+            msg += `\n│ ${cmds.join(" ".repeat(Math.max(1 - cmds.join("").length)))}`;
           }
 
           msg += `\n╰────────ꔪ`;
@@ -59,9 +59,9 @@ module.exports = {
       });
 
       const totalCommands = commands.size;
-      msg += `\n actuellement, le bot a ${totalCommands} commandes pouvant être utilisées \n`;
-      msg += `Eh Athanasius! Tapez ${prefix} help cmdName pour afficher les détails de cette commande..\n`;
-      msg += `⚙️ | ATH AI`; // its not decoy so change it if you want 
+      msg += `\n Actuellement, le bot a ${totalCommands} commandes pouvant être utilisées. \n`;
+      msg += `Eh Toi! Tapez ${prefix} help cmdName pour afficher les détails de cette commande..\n`;
+      msg += `⚙️ | ATHANASIUS`; // its not decoy so change it if you want 
 
       await message.reply(msg);
     } else {
